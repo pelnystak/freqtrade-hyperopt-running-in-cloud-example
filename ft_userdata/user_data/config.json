@@ -87,9 +87,7 @@
         "remove_pumps": false
     },
     "telegram": {
-        "enabled": false,
-        "token": "",
-        "chat_id": ""
+        "enabled": true
     },
     "api_server": {
         "enabled": true,
@@ -97,10 +95,7 @@
         "listen_port": 8080,
         "verbosity": "error",
         "enable_openapi": false,
-        "jwt_secret_key": "b0573e5ec8d07c288b482858afc97a6a5ace572415d8481edaa449b6d137465e",
-        "CORS_origins": [],
-        "username": "Freqtrader",
-        "password": "secretpass!"
+        "CORS_origins": []
     },
     "bot_name": "freqtrade",
     "initial_state": "running",

@@ -1,0 +1,11 @@
+{
+    "telegram": {
+        "token": "",
+        "chat_id": ""
+    },
+    "api_server": {
+        "jwt_secret_key": "",
+        "username": "Freqtrader",
+        "password": ""
+    }
+}
