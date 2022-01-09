@@ -25,42 +25,42 @@ services:
       --db-url sqlite:////freqtrade/user_data/tradesv3.sqlite
       --config /freqtrade/user_data/config.json
       --strategy MACDCrossoverWithTrend
-#    networks:
-#      - trading-network
-#
-#  webserver:
-#    image: nginx:mainline-alpine
-#    container_name: webserver
-#    restart: unless-stopped
-#    ports:
-#      - "80:80"
-#      - "443:443"
-#    volumes:
-#      - ./views:/var/www/html
-#      - ./nginx-conf:/etc/nginx/conf.d
-#      - certbot-etc:/etc/letsencrypt
-#      - certbot-var:/var/lib/letsencrypt
-#      - ./dhparam:/etc/ssl/certs
-#    depends_on:
-#      - freqtrade
-#    networks:
-#      - trading-network
-#
-#  certbot:
-#    image: certbot/certbot
-#    container_name: certbot
-#    volumes:
-#      - certbot-etc:/etc/letsencrypt
-#      - certbot-var:/var/lib/letsencrypt
-#      - ./views:/var/www/html
-#    depends_on:
-#      - webserver
-#    command: certonly --webroot --webroot-path=/var/www/html --email poczta@paweljedrzejewski.pl --agree-tos --no-eff-email --staging -d paweljedrzejewski.pl -d www.paweljedrzejewski.pl
-#
-#volumes:
-#  certbot-etc:
-#  certbot-var:
-#
-#networks:
-#  trading-network:
-#    driver: bridge
+    networks:
+      - trading-network
+
+  webserver:
+    image: nginx:mainline-alpine
+    container_name: webserver
+    restart: unless-stopped
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./views:/var/www/html
+      - ./nginx-conf:/etc/nginx/conf.d
+      - certbot-etc:/etc/letsencrypt
+      - certbot-var:/var/lib/letsencrypt
+      - ./dhparam:/etc/ssl/certs
+    depends_on:
+      - freqtrade
+    networks:
+      - trading-network
+
+  certbot:
+    image: certbot/certbot
+    container_name: certbot
+    volumes:
+      - certbot-etc:/etc/letsencrypt
+      - certbot-var:/var/lib/letsencrypt
+      - ./views:/var/www/html
+    depends_on:
+      - webserver
+    command: certonly --webroot --webroot-path=/var/www/html --email poczta@paweljedrzejewski.pl --agree-tos --no-eff-email --staging -d paweljedrzejewski.pl -d www.paweljedrzejewski.pl
+
+volumes:
+  certbot-etc:
+  certbot-var:
+
+networks:
+  trading-network:
+    driver: bridge
