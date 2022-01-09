@@ -44,31 +44,19 @@
     "pair_whitelist": [
       "ALGO/USDT",
       "ATOM/USDT",
-      "BAT/USDT",
-      "BCH/USDT",
-      "EOS/USDT",
       "ETH/USDT",
-      "IOTA/USDT",
       "LINK/USDT",
       "LTC/USDT",
-      "NEO/USDT",
-      "XMR/USDT",
       "XRP/USDT",
-      "XTZ/USDT"
+      "BNB/USDT",
+      "SOL/USDT",
+      "ADA/USDT",
+      "DOT/USDT",
+      "MATIC/USDT",
+      "XLM/USDT"
     ],
     "pair_blacklist": [
-      "BNB/BTC",
-      "BNB/BUSD",
-      "BNB/ETH",
-      "BNB/EUR",
-      "BNB/NGN",
-      "BNB/PAX",
-      "BNB/RUB",
-      "BNB/TRY",
-      "BNB/TUSD",
-      "BNB/USDC",
-      "BNB/USDS",
-      "BNB/USDT"
+
     ]
   },
   "pairlists": [
@@ -91,7 +79,7 @@
     "remove_pumps": false
   },
   "telegram": {
-    "enabled": true,
+    "enabled": false,
     "token": "",
     "chat_id": ""
   },
@@ -99,7 +87,7 @@
     "enabled": true,
     "jwt_secret_key": "",
     "username": "Freqtrader",
-    "password": "",
+    "password": "SecretPass",
     "listen_ip_address": "0.0.0.0",
     "listen_port": 8080,
     "verbosity": "error",
